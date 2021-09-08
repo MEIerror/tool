@@ -1,0 +1,23 @@
+export ZSH="/Users/leilin/.oh-my-zsh"
+
+ZSH_THEME="robbyrussell"
+DISABLE_AUTO_UPDATE="true"
+HIST_STAMPS="mm/dd/yyyy"
+
+plugins=(
+git
+zsh-autosuggestions
+zsh-syntax-highlighting
+zsh-completions
+)
+
+source $ZSH/oh-my-zsh.sh
+alias vimzsh="vim ~/.zshrc"
+autoload -U compinit && compinit
+export CLICOLOR=1
+export LSCOLORS=exgxaxdxcxegedabagacad
+export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
+
+
+eval `keychain --eval id_rsa`
+alias ssh='ssh -A -o ConnectTimeout=3 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null'
